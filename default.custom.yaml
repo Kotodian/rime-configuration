@@ -8,4 +8,14 @@ patch:
     - when: has_menu
       accept: equal
       send: Page_Down
-
+switches:
+  # 需要用来重置从其它方案切换过来的初始状态
+  - name: ascii_mode
+    reset: 1
+    states: [ 中文, 英文 ]
+  - name: full_shape
+    reset: 0
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    reset: 1
+    states: [ 。，, ．， ]
